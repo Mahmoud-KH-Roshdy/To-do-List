@@ -77,3 +77,8 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+@media (max-width:767px) {
+    .container{
+        width: 310px ;
+    }
+}
