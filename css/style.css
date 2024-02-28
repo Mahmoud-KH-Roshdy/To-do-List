@@ -82,3 +82,19 @@ body {
         width: 310px ;
     }
 }
+.remove-all{
+    order: none;
+    background-color: #D32F2F;
+    padding: 10px;
+    border-radius: 6px;
+    margin-left: 10px;
+    width: fit-content;
+    cursor: pointer;
+    margin: auto;
+    color: white;
+    transition:1s;
+    display:block;
+}
+.remove-all:hover{
+    background-color: #B71C1C;
+}

@@ -2,6 +2,7 @@
 let input = document.querySelector(".input");
 let sumbit = document.querySelector(".add");
 let TasksDiv = document.querySelector(".tasks");
+let removeAll = document.querySelector(".remove-all");
 // ------------------------------------------------ Empty Array ----------------------------------------------
 let arrayTasks = [];
 if (localStorage.getItem("tasks")) {
@@ -53,7 +54,6 @@ function addTasksToPage(tasks) {
         }
         div.setAttribute("data-id", task.id);
         div.appendChild(document.createTextNode(task.text));
-        console.log(div);
         // Create Delete btn
         let span = document.createElement("span");
         span.className = "del";
@@ -85,3 +85,8 @@ function toggleStatusTaskWith(taskId) {
     }
     addTaskToLocal(arrayTasks);
   }
+removeAll.addEventListener("click" ,function () {
+    localStorage.clear("tasks");
+    document.querySelectorAll(".tasks .task").forEach( e => {e.remove()});
+    arrayTasks = [];
+})
